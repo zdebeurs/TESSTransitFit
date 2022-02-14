@@ -42,7 +42,7 @@ frequency, power = LombScargle(Time1[~TransitMask1], Time1[~TransitMask1]).autop
 
 
 
-'''plt.figure(figsize=(12,10))
+plt.figure(figsize=(12,10))
 plt.subplot(211)
 plt.plot(Time1[TransitMask1], Flux1[TransitMask1], "ro", label="Transit Points")
 plt.plot(Time1[~TransitMask1], Flux1[~TransitMask1], "ko", label="Non-Transit Points")
@@ -68,7 +68,7 @@ plt.plot(Time2[TransitMask2_1], Flux2[TransitMask2_1], "ro")
 plt.xlabel("Time")
 plt.ylabel("Flux")
 plt.show()
-'''
+
 
 print(np.mean(np.diff(Time2)))
 
@@ -80,6 +80,7 @@ SelectedTime = Time2[TransitMask2_2]
 SelectedFlux = Flux2[TransitMask2_2]
 
 
+NormalizedFlux1 = NormalizeFlux(Time1, Flux1, TransitMask1)
 NormalizedFlux = NormalizeFlux(Time2, Flux2, TransitMask2_1)
 
 
@@ -90,5 +91,5 @@ plt.show()
 
 np.savetxt("HD189733bLC.txt", np.transpose((Time2[TransitMask2_2], NormalizedFlux[TransitMask2_2])), header="Time, Flux", delimiter=",")
 
-
+np.savetxt("HATP2bLC.txt", np.transpose((Time1[TransitMask1], NormalizedFlux1[TransitMask1])), header="Time, Flux", delimiter=",")
 #Now now normalize the light curve
