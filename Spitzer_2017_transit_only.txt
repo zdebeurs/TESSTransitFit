@@ -1,0 +1,4 @@
+AORKEY	Start Time [UT]	Eclipse Time [BJD-2455000]	Eclipse Uncertainty	Eclipse Depth [p.p.m]	Pulsation Amplitude [p.p.m.]	
+43963136(T)	2011 Jul 13 2:12	5756.42696	0.00047	4961 +or- 72	12 +or- 42
+57787136(T)	2015 Oct 21 13:20	7316.89688	0.00047	4923 +or- 66	-40 +or- 74	
+57786880(T)	2015 Nov 18 17:39	7345.06511	0.00051	4948 +or- 71	15 +or- 71
